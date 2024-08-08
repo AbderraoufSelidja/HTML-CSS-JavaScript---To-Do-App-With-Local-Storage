@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+    <style>
+      body {
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        padding: 20px 40px;
+      }
+      .form {
+        display: flex;
+        padding: 30px;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+      }
+      input:first-child {
+        flex: 1;
+        outline: none;
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      input:last-child {
+        outline: none;
+        padding: 15px 14px;
+        font-size: 16px;
+        background-color: #009688;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        transition: .3s;
+      }
+      input:last-child:hover {
+        background-color: #098679;
+      }
+      .tasks {
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        padding: 30px;
+        border-radius: 5px;
+        margin-top: 30px;
+      }
+      .tasks .task {
+        padding: 15px;
+        background: white;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+      .tasks .task.done {
+        opacity: .5;
+      }
+      .tasks .task:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      .tasks .task .del {
+        padding: 4px 7px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background: red;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 12px;
+        transition: .3s;
+      }
+      .tasks .task .del:hover {
+        background-color: rgb(224, 10, 10);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <input type="text" class="input" />
+        <input type="submit" class="add" value="Add Task" />
+      </div>
+      <div class="tasks"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
