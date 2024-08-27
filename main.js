@@ -3,6 +3,7 @@ let submit = document.querySelector(".add");
 let tasks = document.querySelector(".tasks");
 // Empty Array To Store The Tasks
 let data = [];
+// window.localStorage.clear();
 // Test If There Are Tasks In Local Storage
 if (window.localStorage.getItem("tasks")) {
   data = JSON.parse(window.localStorage.getItem("tasks"));
@@ -52,9 +53,11 @@ function addArrayElements(data) {
     // Create Main Div
     let div = document.createElement("div");
     div.className = "task";
+    // Add done class to compelted tasks in order to maintain the previous state of completed statks on realod
     if (task.completed) {
       div.classList.add("done");
     }
+    // 
     div.setAttribute("data-id", task.id);
     div.appendChild(document.createTextNode(`${task.title}`));
     // Create Delete Button
