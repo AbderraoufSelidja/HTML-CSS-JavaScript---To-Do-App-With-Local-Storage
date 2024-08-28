@@ -3,6 +3,9 @@
         flex-direction: column;
     }
     .form .add {
-        margin-top: 27px;
+        margin: 27px auto 0;
+        width: 100px;
+
     }
+
 }

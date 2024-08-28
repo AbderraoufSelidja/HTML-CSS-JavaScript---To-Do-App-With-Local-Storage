@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- <link rel="stylesheet" href="main.css" /> -->
     <style>
       body {
@@ -14,6 +14,8 @@
       }
       .container {
         padding: 20px 40px;
+        max-width: 600px;
+        margin: auto;
       }
       .form {
         display: flex;
@@ -31,16 +33,17 @@
       }
       input:last-child {
         outline: none;
-        padding: 15px 14px;
-        font-size: 16px;
+        padding: 10px;
         background-color: #009688;
         border-radius: 10px;
         border: 1px solid #ccc;
         color: white;
         text-align: center;
-        font-weight: bold;
+        border-radius: 4px;
         cursor: pointer;
-        transition: .3s;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
       }
       input:last-child:hover {
         background-color: #098679;
@@ -61,7 +64,7 @@
         cursor: pointer;
       }
       .tasks .task.done {
-        opacity: .5;
+        opacity: 0.5;
       }
       .tasks .task:not(:last-child) {
         margin-bottom: 20px;
@@ -72,10 +75,10 @@
         border: 1px solid #ccc;
         background: red;
         color: white;
-        font-weight: bold;
+        border-radius: 4px;
         cursor: pointer;
         font-size: 12px;
-        transition: .3s;
+        transition: 0.3s;
       }
       .tasks .task .del:hover {
         background-color: rgb(224, 10, 10);
